@@ -7,25 +7,26 @@ const Header = () => {
   return (
     <>
       <Container>
-        <a href="/">
-          <img src="/images/logo.svg" alt="" />
+        <a href="#!">
+          <img src="/images/logo.svg" alt="" draggable="false" />
         </a>
 
         <Menu>
           {data.map((item, index) => (
-            <a key={index} href="/">
+            <a key={index} href="#!">
               {item.title}
             </a>
           ))}
         </Menu>
 
         <RightMenu>
-          <a href="/">Shop</a>
-          <a href="/">Tesla Account</a>
+          <a href="#!">Shop</a>
+          <a href="#!">Account</a>
           <Image
             onClick={() => {
               setBurgerStatus(!burgerStatus);
             }}
+            draggable="false"
             src="https://img.icons8.com/material-outlined/24/000000/menu--v1.png"
           />
         </RightMenu>
@@ -37,12 +38,13 @@ const Header = () => {
                 setBurgerStatus(!burgerStatus);
               }}
               src="https://img.icons8.com/material-outlined/24/000000/multiply--v1.png"
+              draggable="false"
             />
           </CloseWrapper>
 
           {data.map((item, index) => (
             <li key={index}>
-              <a href="/">{item.title}</a>
+              <a href="#!">{item.title}</a>
             </li>
           ))}
         </BurgerNav>
@@ -75,8 +77,12 @@ const Menu = styled.div`
   a {
     font-weight: 600;
     text-transform: uppercase;
-    padding: 0 10px;
+    padding: 10px 10px;
     flex-wrap: nowrap;
+  }
+  a:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
   }
 
   @media (max-width: 768px) {
@@ -90,12 +96,19 @@ const RightMenu = styled.div`
   a {
     font-weight: 600;
     text-transform: uppercase;
+    padding: 10px 10px;
     margin-right: 10px;
+  }
+  a:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
   }
 `;
 
 const Image = styled.img`
   cursor: pointer;
+  width: 24px;
+  height: 24px;
 `;
 const BurgerNav = styled.div`
   position: fixed;

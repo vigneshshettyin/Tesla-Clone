@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import Fade from "react-reveal/Fade";
-const Section = ({ title, image, desc }) => {
+const Section = ({ title, image, desc, flag }) => {
   return (
     <>
       <Wrap image={image}>
@@ -13,10 +13,16 @@ const Section = ({ title, image, desc }) => {
         </Fade>
         <Buttons>
           <Fade bottom>
-            <ButtonGroup>
-              <LeftButton>Custom Order</LeftButton>
-              <RightButton>Existing Inventory</RightButton>
-            </ButtonGroup>
+            {flag ? (
+              <ButtonGroup>
+                <LeftButton>Custom Order</LeftButton>
+                <RightButton>Existing Inventory</RightButton>
+              </ButtonGroup>
+            ) : (
+              <ButtonGroup>
+                <LeftButton>Shop Now</LeftButton>
+              </ButtonGroup>
+            )}
           </Fade>
           <DownArrow src="/images/down-arrow.svg" />
         </Buttons>

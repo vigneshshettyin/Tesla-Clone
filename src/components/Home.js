@@ -13,6 +13,7 @@ const Home = () => {
               image={item.image}
               title={item.title}
               desc={item.description}
+              flag={item.button}
             />
           );
         })}
