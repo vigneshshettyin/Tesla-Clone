@@ -1,14 +1,14 @@
 import React from "react";
 import styled from "styled-components";
 import Fade from "react-reveal/Fade";
-const Section = ({ title, image }) => {
+const Section = ({ title, image, desc }) => {
   return (
     <>
       <Wrap image={image}>
         <Fade bottom>
           <ItemText>
             <h1>{title}</h1>
-            <p>Order Online For Touchless Delivery</p>
+            {desc && <p>{desc}</p>}
           </ItemText>
         </Fade>
         <Buttons>

@@ -39,6 +39,36 @@ const data = [
     topSpeed: "190",
     peakPower: "1,040",
   },
+  {
+    id: 4,
+    title: "Solar Panels",
+    description: "Lowest Cost Solar Panels in America",
+    image: "solar-panel.jpg",
+    range: "410",
+    time: "2.05",
+    topSpeed: "190",
+    peakPower: "1,040",
+  },
+  {
+    id: 5,
+    title: "Solar Roof",
+    description: "Produce Clean Energy From Your Roof",
+    image: "solar-roof.jpg",
+    range: "410",
+    time: "2.05",
+    topSpeed: "190",
+    peakPower: "1,040",
+  },
+  {
+    id: 6,
+    title: "Accessories",
+    description: "",
+    image: "accessories.jpg",
+    range: "410",
+    time: "2.05",
+    topSpeed: "190",
+    peakPower: "1,040",
+  },
 ];
 
 export { data };

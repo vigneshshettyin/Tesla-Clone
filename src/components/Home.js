@@ -7,7 +7,14 @@ const Home = () => {
     <>
       <Container>
         {data.map((item, index) => {
-          return <Section key={index} image={item.image} title={item.title} />;
+          return (
+            <Section
+              key={index}
+              image={item.image}
+              title={item.title}
+              desc={item.description}
+            />
+          );
         })}
       </Container>
     </>

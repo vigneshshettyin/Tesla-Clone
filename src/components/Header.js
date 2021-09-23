@@ -45,22 +45,6 @@ const Header = () => {
               <a href="/">{item.title}</a>
             </li>
           ))}
-
-          <li>
-            <a href="/">Existing Inventory</a>
-          </li>
-          <li>
-            <a href="/">Used Inventory</a>
-          </li>
-          <li>
-            <a href="/">Trade-in Inventory</a>
-          </li>
-          <li>
-            <a href="/">Cyber Truck</a>
-          </li>
-          <li>
-            <a href="/">Roadaster</a>
-          </li>
         </BurgerNav>
       </Container>
     </>
